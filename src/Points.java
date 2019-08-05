@@ -4,14 +4,15 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Insets;
 import java.awt.Point;
+import java.util.Scanner;
 
 import javax.swing.JPanel;
 import javax.swing.JFrame;
 
 public class Points extends JPanel {
-    
+    private Scanner sc = new Scanner(System.in);
     //varaibles privadas con las cuales funciona el algoritmo
-    private final double angulo = 10;
+    private double angulo = 0;
     private final int steps = 1;
     private int R = 100;
     private int numRombos = 5;
@@ -26,6 +27,18 @@ public class Points extends JPanel {
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
+        
+        System.out.println("Bienvenido antes de empezar por favor digite el angulo:");
+        angulo = sc.nextInt();
+        System.out.println("por favor digite el R :");
+        R = sc.nextInt();
+        int Sizex = getSize().width; //asumimos que es cuadrada
+        while (R>= Sizex){
+            System.out.println("el valor de R no puede pasar el tamaño de la ventana "+Sizex+", por favor digite R nuevamente:");
+            R = sc.nextInt();
+        }
+        System.out.println("por favor digite el numero de rombos:");
+        numRombos = sc.nextInt();
 
         Graphics2D g2d = (Graphics2D) g;
 
