@@ -10,11 +10,11 @@ import javax.swing.JFrame;
 
 public class Points extends JPanel {
     
-    //varaibles privadas con las caules funciona el algoritmo
-    private final double angulo = 20;
+    //varaibles privadas con las cuales funciona el algoritmo
+    private final double angulo = 10;
     private final int steps = 1;
-    private int R = 200;
-    private int numRombos = 7;
+    private int R = 100;
+    private int numRombos = 5;
 
     /*
    * En esta función se dibuja.
@@ -131,11 +131,11 @@ public class Points extends JPanel {
     public static void main(String[] args) {
         // Crear un nuevo Frame
         JFrame frame = new JFrame("Points");
-        // Al cerrar el frame, termina la ejecuciÃ³n de este programa
+        // Al cerrar el frame, termina la ejecución de este programa
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         // Agregar un JPanel que se llama Points (esta clase)
         frame.add(new Points());
-        // Asignarle tamaÃ±o
+        // Asignarle tamaño
         frame.setSize(500, 500);
         // Poner el frame en el centro de la pantalla
         frame.setLocationRelativeTo(null);
